@@ -11,7 +11,14 @@ angular.module('nemmus', ['ionic', 'ngCordova'])
     url: '/',
     templateUrl: 'views/home/home.html',
     controller: 'HomeCtrl'
-  });
+  })
+    .state('Tard', {
+        url: '/Tard',
+        templateUrl: 'views/home/Tard.html',
+        controller: 'TardCtrl'
+    })
+
+    ;
   $urlRouterProvider.otherwise('/');
 })
 

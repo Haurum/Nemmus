@@ -2,8 +2,6 @@ angular.module('nemmus').controller('HomeCtrl', ['$scope', '$cordovaDeviceMotion
   
   var options = { frequency: 10 };
   
-  $scope.hej = ["Bøvle", "Mark", "Søren"];
-
   document.addEventListener("deviceready", function () {
 
     var watch = $cordovaDeviceMotion.watchAcceleration(options);
@@ -31,3 +29,9 @@ angular.module('nemmus').controller('HomeCtrl', ['$scope', '$cordovaDeviceMotion
 
   }, false);
 }]);
+
+angular.module('nemmus').controller('TardCtrl', ['$scope', '$cordovaDeviceMotion', function ($scope, $cordovaDeviceMotion) {
+
+
+}]);
+
