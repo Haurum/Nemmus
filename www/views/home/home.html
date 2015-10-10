@@ -2,15 +2,27 @@
   <ion-content>
     <div class="row">
       <div class="col">
-          <div class="card">
-              <div class="item item-text-wrap" ui-sref="Tard">
-                  klick her
-              </div>
+        <div class="card">
+          <div class="item item-text-wrap" ng-click="recordMovement(1)">
+              Record
           </div>
-        <p>x: {{ X }}</p>
-        <p>y: {{ Y }}</p>
-        <p>z: {{ Z }}</p>
-        <p>Timestamp: {{ timestamp }}</p>
+        </div>
+        <div class="card">
+          <div class="item item-text-wrap" ng-click="stopMovement()">
+              Stop
+          </div>
+        </div>
+        <div class="card">
+          <div class="item item-text-wrap" ng-click="createBaseline()">
+              Reset
+          </div>
+        </div>
+        {{ gns }}
+        <canvas id="line" class="chart chart-line" chart-data="data"
+          chart-labels="labels" chart-legend="true" chart-series="series"
+          chart-click="onClick" >
+        </canvas> 
+        {{ moves }}
       </div>
     </div>
   </ion-content>
